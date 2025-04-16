@@ -34,7 +34,24 @@ def preprocess_shuttles(df: pd.DataFrame) -> pd.DataFrame:
     Preprocess the shuttles dataframe.
     """
     df["price"] = _parse_money(df["price"])
-    #df["d_check_completed"] = _is_true(df["d_check_completed"])
+    # df["d_check_completed"] = _is_true(df["d_check_completed"])
     df["moon_clearance_complete"] = _is_true(df["moon_clearance_complete"])
 
     return df
+
+
+def create_model_input_table(
+    shuttles: pd.DataFrame, companies: pd.DataFrame, reviews: pd.DataFrame
+) -> pd.DataFrame:
+    """
+    Create the model input table by merging shuttles, companies and reviews dataframes.
+    """
+    # Merge shuttles and reviews dataframes
+    reated_shuttles = shuttles.merge(reviews, left_on="id", right_on="shuttle_id")
+
+    #  Merge shuttles and companies dataframes
+    model_input_table = reated_shuttles.merge(
+        companies, left_on="company_id", right_on="id"
+    )
+
+    return model_input_table.dropna()
