@@ -32,3 +32,4 @@ model_input_table:
     type: pandas.ParquetDataset
     filepath: data/03_primary/model_input_table.pq
     
+    

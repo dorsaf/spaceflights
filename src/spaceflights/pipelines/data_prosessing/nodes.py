@@ -34,7 +34,7 @@ def preprocess_shuttles(df: pd.DataFrame) -> pd.DataFrame:
     Preprocess the shuttles dataframe.
     """
     df["price"] = _parse_money(df["price"])
-    # df["d_check_completed"] = _is_true(df["d_check_completed"])
+    df["d_check_complete"] = _is_true(df["d_check_complete"])
     df["moon_clearance_complete"] = _is_true(df["moon_clearance_complete"])
 
     return df
