@@ -31,5 +31,16 @@ preprocessed_shuttles:
 model_input_table:
     type: pandas.ParquetDataset
     filepath: data/03_primary/model_input_table.pq
+
+
+regressor:
+    type: pickle.PickleDataset
+    filepath: data/06_model/regressor.pkl
+    versioned: true
+ #   save_args:
+ #       protocol: 4
+ #   load_args:
+ #       encoding: utf-8
+#      errors: replace
     
     

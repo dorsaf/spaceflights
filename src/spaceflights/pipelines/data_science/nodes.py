@@ -12,7 +12,7 @@ from sklearn.metrics import r2_score
 
 
 def split_data(df: pd.DataFrame, parameters:t.Dict) -> t.Tuple:
-    X= df[parameters["fatures"]]
+    X= df[parameters["features"]]
     Y= df["price"]
     X_train, X_test, Y_train, Y_test = train_test_split(X,Y, test_size=parameters['test_size'])
     return X_train, X_test, Y_train, Y_test
