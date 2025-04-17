@@ -1,1 +1,1 @@
-{"model_input_table": {"rows": 759609, "columns": 28, "file_size": 5290516}, "X_train": {"rows": 607687, "columns": 8}, "X_test": {"rows": 151922, "columns": 8}}
+{"model_input_table": {"rows": 759609, "columns": 28, "file_size": 5290516}, "candidate_modelling_pipeline.X_train": {"rows": 607687, "columns": 4}, "active_modelling_pipeline.X_train": {"rows": 607687, "columns": 8}, "candidate_modelling_pipeline.X_test": {"rows": 151922, "columns": 4}, "active_modelling_pipeline.X_test": {"rows": 151922, "columns": 8}}

@@ -33,14 +33,13 @@ model_input_table:
     filepath: data/03_primary/model_input_table.pq
 
 
-regressor:
+active_modelling_pipeline.regressor:
     type: pickle.PickleDataset
-    filepath: data/06_model/regressor.pkl
+    filepath: data/06_model/regressor_active.pkl
     versioned: true
- #   save_args:
- #       protocol: 4
- #   load_args:
- #       encoding: utf-8
-#      errors: replace
-    
+
+candidate_modelling_pipeline.regressor:
+    type: pickle.PickleDataset
+    filepath: data/06_model/regressor_candidate.pkl
+    versioned: true
     
